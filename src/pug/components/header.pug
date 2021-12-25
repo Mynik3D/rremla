@@ -1,0 +1,28 @@
+header.header.h-full.w-full 
+	.container-lg
+		.header__holder.h-9
+			nav.header__menu
+				.header__list
+					each object, key in data.header.menu
+						a.header__link.text-lg.text-black.js-to-anchor(
+							href=object.url
+							data-link=key
+						)
+							!= object.name
+
+			.switch-lang
+						a.link(href="#") EN
+
+			.header__social
+				nav.header__list
+						each object, key in data.socials.icons
+							a.social__link.js-to-anchor(
+								data-link=key
+								
+							)
+								+svg(object.icon)
+								
+
+				
+
+							

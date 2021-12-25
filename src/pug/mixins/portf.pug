@@ -1,0 +1,12 @@
+mixin masonry-card(ClassName, product)
+  .masonry-card(class= ClassName)
+    a.masonry-card__img-wrapper(href="#")
+      img.masonry-card__img(src="img/" + product.img)
+    .masonry-card__info
+      a.masonry-card__title(href="#")= product.title
+      a.masonry-card__author(href="#")= product.author
+      span.masonry-card__type Картина,  80x60 см.
+    .masonry-card__footer
+      .masonry-card__price= product.price
+        <span class="masonry-card__price-rub">7</span>
+      .masonry-card__old-price= product.oldPrice
